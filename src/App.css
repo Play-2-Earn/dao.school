@@ -1,0 +1,191 @@
+/* App.css */
+:root {
+  --primary-blue: #2b3595;
+  --accent-teal: #00e8c5;
+  --dark-bg: #0f1a2f;
+  --light-bg: #f5f9fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+}
+
+.header {
+  background: var(--dark-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 4px solid var(--accent-teal);
+}
+
+.domain-glow {
+  font-size: 4rem;
+  color: var(--light-bg);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.domain-glow::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: var(--accent-teal);
+}
+
+.subtitle {
+  color: var(--accent-teal);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(43, 53, 149, 0.1);
+  text-align: center;
+}
+
+.hero-card h2 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 2rem;
+}
+
+.pill-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background: var(--primary-blue);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.curriculum {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.course-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-teal);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-size: contain;
+}
+
+.academy-icon {
+  background-image: url("https://img.icons8.com/clouds/100/classroom.png");
+}
+.blockchain-icon {
+  background-image: url("https://img.icons8.com/color/100/blockchain.png");
+}
+.governance-icon {
+  background-image: url("https://img.icons8.com/external-filled-outline-wichaiwi/100/external-governance-blockchain-filled-outline-wichaiwi.png");
+}
+
+.enroll-button {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(43, 53, 149, 0.3);
+}
+
+.enroll-button:hover {
+  background: var(--accent-teal);
+  color: var(--dark-bg);
+  transform: scale(1.05);
+}
+
+.button-arrow {
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.footer {
+  margin-top: auto;
+  background: var(--dark-bg);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer p:first-child {
+  color: var(--accent-teal);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .domain-glow {
+    font-size: 2.5rem;
+  }
+
+  .hero-card {
+    padding: 2rem;
+  }
+
+  .hero-card h2 {
+    font-size: 1.8rem;
+  }
+}
