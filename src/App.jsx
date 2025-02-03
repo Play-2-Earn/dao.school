@@ -45,12 +45,12 @@ function App() {
 
         <div className="cta-section">
           <a
-            href="https://www.b1tcoin.ai/"
+            href="https://www.ycx.ai/"
             className="enroll-button"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Explore Bitcoin AI
+            Explore YCX
             <span className="button-arrow">↗</span>
           </a>
         </div>
